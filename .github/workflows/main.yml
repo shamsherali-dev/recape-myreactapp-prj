@@ -1,0 +1,12 @@
+name: rct
+on: 
+  push:
+    branches: [main]
+jobs:
+  dm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: gt
+        run: echo "welcome here"
+    
+    
