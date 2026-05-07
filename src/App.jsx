@@ -16,10 +16,9 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Started</h1>
+          <h1>Let's Started</h1>
           <p>
             Edit Code<code>src/App.jsx</code> and save to test <code>HMR</code>
-            <code>and secore </code>
           </p>
         </div>
         <button
