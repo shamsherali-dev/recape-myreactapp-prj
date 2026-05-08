@@ -22,15 +22,16 @@ jobs:
         run: npm install gh-pages
       - name: react build
         run: npm run build
-      - name: deploy
-        run: npm run deploy
+      # - name: deploy
+      #   run: npm run deploy
       - name: upload artifacts
         uses: actions/upload-artifact@v7.0.1
         with:
           name: reactBuild
           path: dist/
           
-
+      - name: final
+        run: echo "everything is done"
           
         
         
