@@ -18,6 +18,8 @@ jobs:
           cache: 'npm'
       - name: install deps
         run: npm install
+      - name: gh
+        run: npm install gh-pages
       - name: react build
         run: npm run build
       - name: deploy
