@@ -1,12 +1,34 @@
-name: rct
-on: 
+name: reactBuild
+on:
   push:
     branches: [main]
 jobs:
-  dm:
+  build-deploy-reactapp:
     runs-on: ubuntu-latest
+    concurrency:
+        group: dp
+        cancel-in-progress: true
     steps:
-      - name: gt
-        run: echo "welcome here"
-    
-    
+      - name: checkout actons
+        uses: actions/checkout@v6.0.2
+      - name: setup nodejs
+        uses: actions/checkout@v6.0.2
+        with:
+          node-version: "lts/*"
+          cache: 'npm'
+      - name: install deps
+        run: npm install
+      - name: react build
+        run: npm run build
+      - name: deploy
+        run: npm run deploy
+      - name: upload artifacts
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: reactBuild
+          path: dist/
+          
+
+          
+        
+        
